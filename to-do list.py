@@ -41,12 +41,12 @@ def mark_task_completed():
                 status = "Pending"
             print(count,".",task.description,"-->",status)
             count = count + 1
-            num = int(input("Enter the Task Number: "))
-            if num >= 1 and num <= len(tasks):
-                tasks[num - 1].mark_completed()
-                print("Task Marked As Completed!")
-            else:
-                print("Invalid Task Number")
+        num = int(input("Enter the Task Number: "))
+        if num >= 1 and num <= len(tasks):
+            tasks[num - 1].mark_completed()
+            print("Task Marked As Completed!")
+        else:
+            print("Invalid Task Number")
 while True:
     print("**** To-Do List Menu ****")
     print("1. Add Task")
