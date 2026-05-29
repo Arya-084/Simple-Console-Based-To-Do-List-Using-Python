@@ -7,9 +7,21 @@ class Task:
     def mark_completed(self):
         self.completed = True
 tasks = []
+def print_task():
+    print("Your Task: ")
+        count = 1
+        for task in tasks:
+            if task.completed:
+                status = "Completed"
+            else:
+                status = "Pending"
+            print(count,".",task.description,"-->",status)
+            count = count + 1
 def is_empty():
     if len(tasks) == 0:
         return True
+    else:
+        return False 
 def add_task():
     description = input("Enter your task description: ")
     task = Task(description)
@@ -19,28 +31,14 @@ def view_task():
     if is_empty():
         print("No Task Available")
     else:
-        print("Your Task: ")
-        count = 1
-        for task in tasks:
-            if task.completed:
-                status = "Completed"
-            else:
-                status = "Pending"
+        print_task()
             print(count,".",task.description,"-->",status)
             count = count + 1
 def mark_task_completed():
     if is_empty():
         print("No Task Available ")
     else:
-        print("Task: ")
-        count = 1
-        for task in tasks:
-            if task.completed:
-                status = "Completed"
-            else:
-                status = "Pending"
-            print(count,".",task.description,"-->",status)
-            count = count + 1
+        print_task()
         num = int(input("Enter the Task Number: "))
         if num >= 1 and num <= len(tasks):
             tasks[num - 1].mark_completed()
