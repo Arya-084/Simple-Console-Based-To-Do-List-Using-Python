@@ -8,9 +8,9 @@ class Task:
         self.completed = True
 tasks = []
 def print_task():
-    print("Your Task: ")
-        count = 1
-        for task in tasks:
+       print("Your Task: ")
+       count = 1
+       for task in tasks:
             if task.completed:
                 status = "Completed"
             else:
