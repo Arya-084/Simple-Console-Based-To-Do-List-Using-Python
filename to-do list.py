@@ -29,11 +29,9 @@ def add_task():
     print("Task Added Successfully! ")
 def view_task():
     if is_empty():
-        print("No Task Available")
-    else:
+        print("No Task Available ")
+    else: 
         print_task()
-            print(count,".",task.description,"-->",status)
-            count = count + 1
 def mark_task_completed():
     if is_empty():
         print("No Task Available ")
